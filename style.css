@@ -1,0 +1,109 @@
+p {
+	text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000
+}
+
+h2 {
+	text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000
+}
+
+.float {
+	position: absolute;
+	top: 50%;
+  	left: 50%;
+ 	transform: translate(-50%, -50%);
+ 	background-image: url("./images/jackson.jpg");
+ 	background-size: cover;
+ 	border-radius: 10px;
+ 	height: 600px;
+ 	width: 400px;
+}
+
+.list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000
+}
+
+.link-tail {
+	opacity: 0.5;
+	transition: 0.5s
+}
+
+.text {
+	margin-left: 10px;
+	color: yellow;
+	font-family: 'Space Mono', monospace;
+	font-style: italic;
+	word-wrap: break-word;
+} 
+
+.tooltip {
+	text-align: center;
+	background-color: rgba(75,75,75,0.6);
+	border-radius: 5px;
+	width: max-content;
+	margin: auto;
+	margin-top: 70%;
+	max-width: 100%;
+	opacity: 0;
+	transition: 0.5s;
+	
+}
+
+.tooltip p {
+	padding: 6px;
+	color: yellow;
+	font-family: 'Space Mono', monospace;
+	font-style: italic;
+}
+
+.list a {
+	color: yellow;
+	text-decoration: none;
+}
+
+.list a:hover {
+	text-decoration: underline;
+}
+
+a:hover .link-tail {
+	opacity: 1;
+	transition: 0.5s;
+}
+
+@media only screen and (max-width: 480px) {
+	html {
+		font-size: 13px;
+	}
+	.float {
+		width: 80vw;
+		height: 120vw;
+		min-width: 200px;
+	}
+	.tooltip {
+		margin-top: 30%;
+	}
+}
+
+@media only screen and (max-height: 600px) {
+	html {
+		font-size: 12px;
+	}
+	.float {
+		width: 53.33vh;
+		height: 80vh;
+	}
+}
