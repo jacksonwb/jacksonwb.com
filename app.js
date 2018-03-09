@@ -1,7 +1,11 @@
 console.log("JS App has been loaded");
 
 //Set element pointers
-const tooltip = document.getElementById("tooltip");
+const tooltip = document.createElement('div');
+tooltip.setAttribute("class", "tooltip");
+tooltip.style.opacity = 0;
+tooltip.innerHTML = "<p>Email address copied to clipboard</p>";
+
 var copyEmailBtn = document.querySelector('.js-emailcopybtn');  
 
 copyEmailBtn.addEventListener('click', function(event) {  
@@ -15,11 +19,17 @@ copyEmailBtn.addEventListener('click', function(event) {
     // Now that we've selected the anchor text, execute the copy command  
     var successful = document.execCommand('copy');  
 
-    //fade tooltip in and out
-    tooltip.style.opacity = 1;
+    //Append tooltip element to main div and fade tooltip in and out
+    document.querySelector('.float').appendChild(tooltip);
+    setTimeout(function() {
+      tooltip.style.opacity = 1;
+    }, 5);
     setTimeout(function (){
-    	tooltip.style.opacity= 0;
-	}, 3000);
+    	tooltip.style.opacity = 0;
+      setTimeout(function (){
+        tooltip.remove();
+      }, 500);
+	  }, 3000);
 
     //report success or catch error
     var msg = successful ? 'successful' : 'unsuccessful';  

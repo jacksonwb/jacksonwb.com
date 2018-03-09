@@ -58,8 +58,7 @@ h2 {
 	margin: auto;
 	margin-top: 70%;
 	max-width: 100%;
-	opacity: 0;
-	transition: 0.5s;
+	transition: opacity 0.5s;
 	
 }
 
