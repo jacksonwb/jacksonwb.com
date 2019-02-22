@@ -1,3 +1,7 @@
+body {
+	transition: background-color 0.5s ease-in;
+}
+
 p {
 	text-shadow:
    -1px -1px 0 #000,  
@@ -14,27 +18,40 @@ h2 {
      1px 1px 0 #000
 }
 
+.container {
+	visibility: hidden;
+	transition: opacity 0.25s ease-in;
+	opacity: 0;
+}
+
 .float {
 	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	top: 50%;
   	left: 50%;
  	transform: translate(-50%, -50%);
- 	background-image: url("./images/jackson.jpg");
+ 	background-image: url("./images/tree.jpg");
  	background-size: cover;
  	border-radius: 10px;
  	height: 600px;
- 	width: 400px;
+ 	width: 450px;
 }
 
 .list {
+	transform: translate(0px, 30px);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 	list-style-type: none;
-	margin: 0;
+	margin: 5px;
 	padding: 0;
 	text-shadow:
-   -1px -1px 0 #000,  
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-     1px 1px 0 #000
+   -0.5px -0.5px 0 #000,  
+    0.5px -0.5px 0 #000,
+    -0.5px 0.5px 0 #000,
+     0.5px 0.5px 0 #000;
 }
 
 .link-tail {
@@ -43,12 +60,54 @@ h2 {
 }
 
 .text {
-	margin-left: 10px;
 	color: yellow;
 	font-family: 'Space Mono', monospace;
 	font-style: italic;
 	word-wrap: break-word;
 } 
+
+.dark-text {
+	color: rgb(139, 35, 139);
+	font-family: 'Space Mono', monospace;
+	font-style: italic;
+	word-wrap: break-word;
+	text-shadow:
+   -0.5px -0.5px 0 #000,  
+    0.5px -0.5px 0 #000,
+    -0.5px 0.5px 0 #000,
+     0.5px 0.5px 0 #000;
+} 
+
+.switch {
+	float: right;	
+}
+
+.switch:hover {
+	text-decoration: underline;
+}
+
+.back-fade {
+	background-color: rgba(0, 0, 0, 0.438);
+	border-radius: 5px;
+	box-shadow: 1em;
+}
+
+.title {
+	margin-left: 10px;
+	margin-top: 10px;
+	padding-left: 10px;
+}
+
+.text h2 {
+	display: inline-block;
+	margin: 0px;
+	margin-right: 20px;
+}
+
+.text p {
+	display: inline-block;
+	margin: 0px;
+}
 
 .tooltip {
 	text-align: center;
@@ -64,14 +123,13 @@ h2 {
 
 .tooltip p {
 	padding: 6px;
-	color: yellow;
 	font-family: 'Space Mono', monospace;
 	font-style: italic;
 }
 
 .list a {
-	color: yellow;
 	text-decoration: none;
+	color: yellow;
 }
 
 .list a:hover {
