@@ -145,13 +145,21 @@ a:hover .link-tail {
 	html {
 		font-size: 13px;
 	}
+
 	.float {
 		width: 80vw;
 		height: 120vw;
 		min-width: 200px;
 	}
+
 	.tooltip {
 		margin-top: 30%;
+	}
+
+	#toggle {
+		border-radius: 30px;
+		background-color: rgba(145, 145, 145, 0.582);
+		padding: 10px;
 	}
 }
 
@@ -159,8 +167,15 @@ a:hover .link-tail {
 	html {
 		font-size: 12px;
 	}
+
 	.float {
 		width: 53.33vh;
 		height: 80vh;
+	}
+
+	#toggle {
+		border-radius: 30px;
+		background-color: rgba(145, 145, 145, 0.582);
+		padding: 10px;
 	}
 }
